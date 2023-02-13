@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Montserrat";
+}
+
+.top {
+    background-image: url(img/head.jpg);
+    height: 1024px;
+    background-repeat: no-repeat;
+}
+
+.title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 78px;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+    padding-top: 217.1px;
+    padding-left: 120.22px;
+    padding-right: 531px;
+}
+
+.title__text {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 32px;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+    padding-top: 32px;
+    padding-left: 120.22px;
+    padding-right: 838.78px;
+}
+
+.title__button {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #9C0332;
+    border-radius: 30px;
+    color: #FFFFFF;
+    margin-top: 44px;
+    margin-left: 120px;
+    width: 234.06px;
+    height: 48.6px;
+}
+
+.content {
+    display: flex;
+    gap: 32px;
+    padding-right: 120px;
+    padding-left: 120px;
+    background-image: url(img/hesd2.jpg);
+    height: 556px;
+}
+
+.content__play {
+    width: 379px;
+    height: 300px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+    border-radius: 16px;
+    margin-top: 128px;
+    padding-left: 32px;
+}
+
+.content__play_1 {
+    background-image: url(img/play1.jpg);
+    background-repeat: no-repeat;
+}
+
+.content__play_2 {
+    background-image: url(img/play2.jpg);
+    background-repeat: no-repeat;
+}
+
+.content__play_3 {
+    background-image: url(img/play3.jpg);
+    background-repeat: no-repeat;
+}
