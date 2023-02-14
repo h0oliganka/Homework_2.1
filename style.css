@@ -11,6 +11,10 @@ body {
     background-image: url(img/head.jpg);
     height: 1024px;
     background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-right: calc(50% - 600px);
+    padding-left: calc(50% - 600px);
 }
 
 .title {
@@ -22,8 +26,7 @@ body {
     align-items: center;
     color: #FFFFFF;
     padding-top: 217.1px;
-    padding-left: 120.22px;
-    padding-right: 531px;
+    padding-right: 350px;
 }
 
 .title__text {
@@ -35,11 +38,10 @@ body {
     align-items: center;
     color: #FFFFFF;
     padding-top: 32px;
-    padding-left: 120.22px;
-    padding-right: 838.78px;
 }
 
 .title__button {
+    margin-top: 44px;
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
@@ -50,10 +52,24 @@ body {
     background: #9C0332;
     border-radius: 30px;
     color: #FFFFFF;
-    margin-top: 44px;
-    margin-left: 120px;
     width: 234.06px;
     height: 48.6px;
+}
+
+.title__button_a {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #9C0332;
+    border-radius: 30px;
+    color: #FFFFFF;
+    width: 234.06px;
+    height: 48.6px;
+    text-decoration: none;
 }
 
 .content {
@@ -63,6 +79,8 @@ body {
     padding-left: 120px;
     background-image: url(img/hesd2.jpg);
     height: 556px;
+    padding-right: calc(50% - 600px);
+    padding-left: calc(50% - 600px);
 }
 
 .content__play {
@@ -73,7 +91,7 @@ body {
     font-size: 24px;
     line-height: 32px;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     color: #FFFFFF;
     border-radius: 16px;
     margin-top: 128px;
@@ -93,4 +111,8 @@ body {
 .content__play_3 {
     background-image: url(img/play3.jpg);
     background-repeat: no-repeat;
+}
+
+.content__text {
+    padding-bottom: 32px;
 }
