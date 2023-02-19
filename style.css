@@ -40,6 +40,10 @@ body {
     padding-top: 32px;
 }
 
+.strong-text {
+    font-weight: 700;
+}
+
 .title__button {
     margin-top: 44px;
     font-style: normal;
