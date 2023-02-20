@@ -1,10 +1,12 @@
-let a = 20;
+let a = 10;
+alert(a)
+a = 20;
 alert(a)
 
-let year = 2007;
+const year = 2007;
 alert(year)
 
-let userName = "Брендан";
+const userName = "Брендан";
 alert(userName)
 
 let number = 10;
@@ -48,5 +50,6 @@ console.log(user.age); //22
 console.log(user.isAdmin); //'true'
 console.log(user[info]);
 alert(user[info])
+
 let myName = prompt("Как вас зовут?")
-alert('Привет ' + myName + '!')
+alert(`Привет ${myName} !`)
