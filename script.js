@@ -1,7 +1,7 @@
-let a = 10;
-alert(a)
-a = 20;
-alert(a)
+let А = 10;
+alert(А)
+А = 20;
+alert(А)
 
 const year = 2007;
 alert(year)
@@ -53,3 +53,77 @@ alert(user[info])
 
 let myName = prompt("Как вас зовут?")
 alert(`Привет ${myName} !`)
+
+let password = 'пароль';
+let question = prompt('Введите пароль')
+
+if (question === password) {
+    alert('Пароль введен верно')
+} else {
+    alert('Пароль введен неправильно')
+}
+
+
+const c = 2;
+
+if (c > 0 && c < 10) {
+    alert('верно');
+} else {
+    alert('неверно');
+}
+
+let d = 99;
+let e = 101;
+
+if (d > 100 || e > 100) {
+    console.log('верно');
+} else {
+    console.log('неверно');
+}
+
+let a = 2;
+let b = 3;
+alert(a + b);
+
+let month = Number(prompt('Введите номер месяца'));
+
+switch (month) {
+    case 12:
+        console.log('зима');
+        break;
+    case 1:
+        console.log('зима');
+        break;
+    case 2:
+        console.log('зима');
+        break;
+    case 3:
+        console.log('весна');
+        break;
+    case 4:
+        console.log('весна');
+        break;
+    case 5:
+        console.log('весна');
+        break;
+    case 6:
+        console.log('лето');
+        break;
+    case 7:
+        console.log('лето');
+        break;
+    case 8:
+        console.log('лето');
+        break;
+    case 9:
+        console.log('осень');
+        break;
+    case 10:
+        console.log('осень');
+        break;
+    case 11:
+        console.log('осень');
+        break;
+    default:
+        console.log('такого месяца нет');
+}
