@@ -282,12 +282,12 @@
 const arr = [1, 5, 4, 10, 0, 3];
 
 for (let i = 0; i < arr.length; i++) {
-	if (arr[i] == 10) break;
-	console.log(arr[i]);
+    if (arr[i] == 10) break;
+    console.log(arr[i]);
 }
 
 //Задание 2 (2.6)
-let arr2 = [1, 5, 4, 10, 0, 3]; 
+let arr2 = [1, 5, 4, 10, 0, 3];
 let i = 0, found = false;
 for (let elem of arr2) {
     if (elem == 4) {
@@ -296,7 +296,7 @@ for (let elem of arr2) {
     }
     ++i;
 }
-if(!found) i = -1;
+if (!found) i = -1;
 console.log(i);
 
 //Задание 3 (2.6)
@@ -338,8 +338,8 @@ console.log(search);
 //Задание 8 (2.6)
 let word = 'abcdef';
 let rev = "";
-for(let i = word.length; i > 0; i--) {
-    rev += word[i-1];
+for (let i = word.length; i > 0; i--) {
+    rev += word[i - 1];
 }
 console.log(rev);
 
@@ -362,3 +362,17 @@ const arrSum = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 for (let i = 0; i < arrSum.length; i++) {
     console.log(arrSum[i + 1] + arrSum[i]);
 }
+
+//Задание 11 (2.6)
+let arr11 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let random = arr11[Math.floor(Math.random() * arr11.length)];
+console.log(random);
+const even = arr11.filter(el => el % 2 === 0);
+console.log(even);
+
+//Задание 12 (2.6)
+let arr12 = [1, 2, 3, 4, 5, 6];
+let random2 = arr12[Math.floor(Math.random() * arr12.length)];
+console.log(random2);
+const sum = arr12.reduce((a, b) => (a + b)) / arr12.length;
+console.log(sum);
