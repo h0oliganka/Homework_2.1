@@ -377,75 +377,75 @@
 // const sum = arr12.reduce((a, b) => (a + b)) / arr12.length;
 // console.log(sum);
 
-// // Задание 1 (2.7)
-// let str = 'Язык JavaScript';
-// console.log(str.toUpperCase());
+// Задание 1 (2.7)
+let str = 'Язык JavaScript';
+console.log(str.toUpperCase());
 
-// // Задание 2 (2.7)
-// const products = ['Кошка', 'Кит', 'Комар', 'Носорог'];
-// const search = 'Ко';
+// Задание 2 (2.7)
+const products = ['Кошка', 'Кит', 'Комар', 'Носорог'];
+const search = 'Ко';
 
-// products.forEach((product) => {
-//     if (product.toLowerCase().includes(search.toLowerCase())) {
-//         console.log([product]);
-//     }
-// });
+products.forEach((product) => {
+    if (product.toLowerCase().includes(search.toLowerCase())) {
+        console.log([product]);
+    }
+});
 
-// // Задание 3 (2.7)
-// console.log(Math.floor(32.58884)); // 32
-// console.log(Math.ceil(32.58884)); // 33
-// console.log(Math.round(32.58884)); // 33
+// Задание 3 (2.7)
+console.log(Math.floor(32.58884)); // 32
+console.log(Math.ceil(32.58884)); // 33
+console.log(Math.round(32.58884)); // 33
 
-// // Задание 4 (2.7)
-// console.log(Math.min(52, 53, 49, 77, 21, 32));
-// console.log(Math.max(52, 53, 49, 77, 21, 32));
+// Задание 4 (2.7)
+console.log(Math.min(52, 53, 49, 77, 21, 32));
+console.log(Math.max(52, 53, 49, 77, 21, 32));
 
-// // Задание 5 (2.7)
-// function getRndInteger() {
-//     return Math.floor(Math.random() * (10 - 1)) + 1;
-// }
-// console.log(getRndInteger());
+// Задание 5 (2.7)
+function getRndInteger() {
+    return Math.floor(Math.random() * (10 - 1)) + 1;
+}
+console.log(getRndInteger());
 
-// // Задание 6 (2.7)
+// Задание 6 (2.7)
 
-// function getRandomArrNumbers(randomNumber) {
-//     let sixthArray = [];
-//     let arrLength = Math.floor(randomNumber / 2)
-//     for (let i = 0; i < arrLength; i++) {
-//         sixthArray.push(Math.round(Math.random() * randomNumber));
-//     }
-//     console.log(sixthArray);
-// }
-// getRandomArrNumbers(Number(prompt('Введите любое число')));
+function getRandomArrNumbers(randomNumber) {
+    let sixthArray = [];
+    let arrLength = Math.floor(randomNumber / 2)
+    for (let i = 0; i < arrLength; i++) {
+        sixthArray.push(Math.round(Math.random() * randomNumber));
+    }
+    console.log(sixthArray);
+}
+getRandomArrNumbers(Number(prompt('Введите любое число')));
 
-// // Задание 7 (2.7)
-// let seventhRandomValue = (maxValue, minValue) => {
-//     let seventhRandomResult = Math.round(Math.random() * (maxValue - minValue) + minValue);
-//     console.log(seventhRandomResult);
-// }
-// seventhRandomValue(Number(prompt('Введите любое число')), Number(prompt('Введите любое число, значение которого меньше, чем у первого числа')));
+// Задание 7 (2.7)
+let seventhRandomValue = (maxValue, minValue) => {
+    let seventhRandomResult = Math.round(Math.random() * (maxValue - minValue) + minValue);
+    console.log(seventhRandomResult);
+}
+seventhRandomValue(Number(prompt('Введите любое число')), Number(prompt('Введите любое число, значение которого меньше, чем у первого числа')));
 
-// // Задание 8 (2.7)
-// console.log(new Date());
+// Задание 8 (2.7)
+console.log(new Date());
 
-// // Задание 9 (2.7)
-// let theBigDay = new Date();
-// theBigDay.setDate(73);
+// Задание 9 (2.7)
+let theBigDay = new Date();
+theBigDay.setDate(73);
 
-// console.log(theBigDay);
+console.log(theBigDay);
 
-// Задание 10 (2.7)
-// function showTime () {
-//     let days = ["воскресенье", "понедельник", "вторник", "среда", "четверг", "пятница", "суббота"];
-//     let months = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"];
-//     let myDates = new Date();
+//Задание 10 (2.7)
+function showTime () {
+    let days = ["воскресенье", "понедельник", "вторник", "среда", "четверг", "пятница", "суббота"];
+    let months = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"];
+    let myDates = new Date();
 
-//     let out = "Дата: " + myDates.getDate() + " " + months[myDates.getMonth()] + " " + myDates.getFullYear() + " - это " + days[myDates.getDay()];
-//     let time = "Время: " + myDates.getHours() + ":" + myDates.getMinutes() + ":" + myDates.getSeconds();
-//     return out + " " + time;
-// }
+    let out = "Дата: " + myDates.getDate() + " " + months[myDates.getMonth()] + " " + myDates.getFullYear() + " - это " + days[myDates.getDay()];
+    let time = "Время: " + myDates.getHours() + ":" + myDates.getMinutes() + ":" + myDates.getSeconds();
+    return out + " " + time;
+}
 
-// console.log(showTime());
+console.log(showTime());
 
 // Задание 11 (2.7)
 const checkFruits = () => {
