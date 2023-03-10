@@ -382,14 +382,16 @@ let str = 'Язык JavaScript';
 console.log(str.toUpperCase());
 
 // Задание 2 (2.7)
-const products = ['Кошка', 'Кит', 'Комар', 'Носорог'];
-const search = 'Ко';
-
-products.forEach((product) => {
-    if (product.toLowerCase().includes(search.toLowerCase())) {
-        console.log([product]);
-    }
-});
+let resultArray = [];
+function searchStart(arr, str) {
+    arr.forEach(element => {
+        if (element.toLowerCase().startsWith(str.toLowerCase())) {
+            resultArray.push(element);
+        }
+    });
+    console.log(resultArray);
+}
+searchStart(['Кошка', 'Кит', 'Комар', 'Носорог'], 'ко'); //['кошка', 'комар']
 
 // Задание 3 (2.7)
 console.log(Math.floor(32.58884)); // 32
@@ -435,17 +437,16 @@ theBigDay.setDate(73);
 console.log(theBigDay);
 
 //Задание 10 (2.7)
-function showTime () {
-    let days = ["воскресенье", "понедельник", "вторник", "среда", "четверг", "пятница", "суббота"];
-    let months = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"];
-    let myDates = new Date();
+let date = new Date();
 
-    let out = "Дата: " + myDates.getDate() + " " + months[myDates.getMonth()] + " " + myDates.getFullYear() + " - это " + days[myDates.getDay()];
-    let time = "Время: " + myDates.getHours() + ":" + myDates.getMinutes() + ":" + myDates.getSeconds();
-    return out + " " + time;
+function dataView(date) {
+    const days = ["Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота"];
+    const months = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"];
+    let dates = date.getDate() + " " + months[date.getMonth()] + " " + date.getFullYear() + " - это " + days[date.getDay()] +" " + date.getHours() + " часов" + " " + date.getMinutes() + " минут" +" " + date.getSeconds()+ " секунд";
+    console.log(dates);
 }
+dataView(date);
 
-console.log(showTime());
 
 // Задание 11 (2.7)
 const checkFruits = () => {
@@ -465,3 +466,6 @@ const checkFruits = () => {
     alert('Вы не угадали ни одного элемента');
     }
 }
+
+
+
