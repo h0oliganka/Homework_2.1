@@ -188,4 +188,26 @@ body {
     flex-grow: 0;
 }
 
+
+.section__heading {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 59px;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+}
+
+.section__text {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 32px;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+}
+
+
 @import 'mobile';

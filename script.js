@@ -278,101 +278,281 @@
 //     }
 // }
 
-//Задание 1 (2.6)
-const arr = [1, 5, 4, 10, 0, 3];
+// //Задание 1 (2.6)
+// const arr = [1, 5, 4, 10, 0, 3];
 
-for (let i = 0; i < arr.length; i++) {
-    if (arr[i] == 10) break;
-    console.log(arr[i]);
+// for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] == 10) break;
+//     console.log(arr[i]);
+// }
+
+// //Задание 2 (2.6)
+// let arr2 = [1, 5, 4, 10, 0, 3];
+// let i = 0, found = false;
+// for (let elem of arr2) {
+//     if (elem == 4) {
+//         found = true;
+//         break;
+//     }
+//     ++i;
+// }
+// if (!found) i = -1;
+// console.log(i);
+
+// //Задание 3 (2.6)
+// let arr3 = [1, 3, 5, 10, 20];
+
+// arr3 = arr3.join('')
+// console.log(arr3);
+
+// //Задание 4 (2.6)
+// let arr4 = [
+//     [1, 1, 1],
+//     [1, 1, 1],
+//     [1, 1, 1]
+// ];
+
+// console.log(arr4);
+
+// //Задание 5 (2.6)
+// let arr5 = [1, 1, 1]
+// arr5.push(2, 2, 2);
+
+// console.log(arr5);
+
+// //Задание 6 (2.6)
+// let arr6 = [9, 8, 7, 'a', 6, 5];
+
+// arr6 = arr6.sort();
+// arr6.pop();
+// console.log(arr6);
+
+// //Задание 7 (2.6)
+// const arr7 = [9, 8, 7, 6, 5];
+
+// let numb = prompt('Введите число от 1 до 10');
+// let search = arr7.includes(+ numb);
+
+// console.log(search);
+
+// //Задание 8 (2.6)
+// let word = 'abcdef';
+// let rev = "";
+// for (let i = word.length; i > 0; i--) {
+//     rev += word[i - 1];
+// }
+// console.log(rev);
+
+// //Задание 9 (2.6)
+// let arr9 = [
+//     [1, 2, 3,],
+//     [4, 5, 6],
+// ]
+
+// const array1 = [1, 2, 3,];
+// const array = [4, 5, 6];
+
+// const newArray = array1.concat(array);
+
+// console.log(newArray);
+
+// //Задание 10 (2.6)
+// const arrSum = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+// for (let i = 0; i < arrSum.length; i++) {
+//     console.log(arrSum[i + 1] + arrSum[i]);
+// }
+
+// //Задание 11 (2.6)
+// let arr11 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// let random = arr11[Math.floor(Math.random() * arr11.length)];
+// console.log(random);
+// const even = arr11.filter(el => el % 2 === 0);
+// console.log(even);
+
+// //Задание 12 (2.6)
+// let arr12 = [1, 2, 3, 4, 5, 6];
+// let random2 = arr12[Math.floor(Math.random() * arr12.length)];
+// console.log(random2);
+// const sum = arr12.reduce((a, b) => (a + b)) / arr12.length;
+// console.log(sum);
+
+// // Задание 1 (2.7)
+// let str = 'Язык JavaScript';
+// console.log(str.toUpperCase());
+
+// // Задание 2 (2.7)
+// let resultArray = [];
+// function searchStart(arr, str) {
+//     arr.forEach(element => {
+//         if (element.toLowerCase().startsWith(str.toLowerCase())) {
+//             resultArray.push(element);
+//         }
+//     });
+//     console.log(resultArray);
+// }
+// searchStart(['Кошка', 'Кит', 'Комар', 'Носорог'], 'ко'); //['кошка', 'комар']
+
+// // Задание 3 (2.7)
+// console.log(Math.floor(32.58884)); // 32
+// console.log(Math.ceil(32.58884)); // 33
+// console.log(Math.round(32.58884)); // 33
+
+// // Задание 4 (2.7)
+// console.log(Math.min(52, 53, 49, 77, 21, 32));
+// console.log(Math.max(52, 53, 49, 77, 21, 32));
+
+// // Задание 5 (2.7)
+// function getRndInteger() {
+//     return Math.floor(Math.random() * (10 - 1)) + 1;
+// }
+// console.log(getRndInteger());
+
+// // Задание 6 (2.7)
+
+// function getRandomArrNumbers(randomNumber) {
+//     let sixthArray = [];
+//     let arrLength = Math.floor(randomNumber / 2)
+//     for (let i = 0; i < arrLength; i++) {
+//         sixthArray.push(Math.round(Math.random() * randomNumber));
+//     }
+//     console.log(sixthArray);
+// }
+// getRandomArrNumbers(Number(prompt('Введите любое число')));
+
+// // Задание 7 (2.7)
+// let seventhRandomValue = (maxValue, minValue) => {
+//     let seventhRandomResult = Math.round(Math.random() * (maxValue - minValue) + minValue);
+//     console.log(seventhRandomResult);
+// }
+// seventhRandomValue(Number(prompt('Введите любое число')), Number(prompt('Введите любое число, значение которого меньше, чем у первого числа')));
+
+// // Задание 8 (2.7)
+// console.log(new Date());
+
+// // Задание 9 (2.7)
+// let theBigDay = new Date();
+// theBigDay.setDate(73);
+
+// console.log(theBigDay);
+
+// //Задание 10 (2.7)
+// let date = new Date();
+
+// function dataView(date) {
+//     const days = ["Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота"];
+//     const months = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"];
+//     let dates = date.getDate() + " " + months[date.getMonth()] + " " + date.getFullYear() + " - это " + days[date.getDay()] +" " + date.getHours() + " часов" + " " + date.getMinutes() + " минут" +" " + date.getSeconds()+ " секунд";
+//     console.log(dates);
+// }
+// dataView(date);
+
+
+// // Задание 11 (2.7)
+// const checkFruits = () => {
+
+//     let list =['Яблоко', 'Груша', 'Дыня', 'Виноград', 'Персик', 'Апельсин', 'Мандарин'];
+//     list = list.sort(() => Math.random() - 0.5);
+//     alert(`Запомните порядок элементов ${ list}`);
+
+//     let userAnswer =(prompt('Чему равнялся первый элемент массива?'));
+//     let userAnswerTwo = (prompt('Чему равнялся последний элемент массива?'));
+
+//     if (userAnswer.toLowerCase() == list[0].toLowerCase() && userAnswerTwo.toLowerCase() == list[6].toLowerCase()) {
+//         alert('Поздравляю, вы угадали оба элемента');
+//     } else if (userAnswer.toLowerCase() == list[0].toLowerCase() || userAnswerTwo.toLowerCase() == list[6].toLowerCase()) {
+//         alert('Вы были близки к победе!'); 
+//     } else {
+//     alert('Вы не угадали ни одного элемента');
+//     }
+// }
+
+// Задание 1 (2.8)
+function getResult(callback) {
+    let arr = [3, 4, 1, 9];
+    callback();
 }
 
-//Задание 2 (2.6)
-let arr2 = [1, 5, 4, 10, 0, 3];
-let i = 0, found = false;
-for (let elem of arr2) {
-    if (elem == 4) {
-        found = true;
-        break;
-    }
-    ++i;
+function getResultSum() {
+    let arr = [3, 4, 1, 9];
+    console.log(arr.reduce((a, b) => a + b));
 }
-if (!found) i = -1;
-console.log(i);
 
-//Задание 3 (2.6)
-let arr3 = [1, 3, 5, 10, 20];
+function getResultMult() {
+    let arr = [3, 4, 1, 9];
+    console.log(arr.reduce((a, b) => a * b));
+}
 
-arr3 = arr3.join('')
-console.log(arr3);
+getResult(getResultSum); // 17
+getResult(getResultMult); // 108
 
-//Задание 4 (2.6)
-let arr4 = [
-    [1, 1, 1],
-    [1, 1, 1],
-    [1, 1, 1]
+// Задание 2 (2.8)
+function compareUser(a, b) {
+    return (a.age - b.age)
+}
+const listUsers = [
+    { name: 'Jon', age: 22 },
+    { name: 'Richard', age: 18 },
+    { name: 'Anton', age: 32 },
+    { name: 'Lida', age: 23 },
+    { name: 'Bob', age: 44 },
 ];
+listUsers.sort(compareUser);
+console.log(listUsers);
 
-console.log(arr4);
+// Задание 3 (2.8)
+const arr = [1, '4', 9, 'two'];
+const arrTwo = [1, '4', false, 9, 'two'];
 
-//Задание 5 (2.6)
-let arr5 = [1, 1, 1]
-arr5.push(2, 2, 2);
-
-console.log(arr5);
-
-//Задание 6 (2.6)
-let arr6 = [9, 8, 7, 'a', 6, 5];
-
-arr6 = arr6.sort();
-arr6.pop();
-console.log(arr6);
-
-//Задание 7 (2.6)
-const arr7 = [9, 8, 7, 6, 5];
-
-let numb = prompt('Введите число от 1 до 10');
-let search = arr7.includes(+ numb);
-
-console.log(search);
-
-//Задание 8 (2.6)
-let word = 'abcdef';
-let rev = "";
-for (let i = word.length; i > 0; i--) {
-    rev += word[i - 1];
-}
-console.log(rev);
-
-//Задание 9 (2.6)
-let arr9 = [
-    [1, 2, 3,],
-    [4, 5, 6],
-]
-
-const array1 = [1, 2, 3,];
-const array = [4, 5, 6];
-
-const newArray = array1.concat(array);
-
-console.log(newArray);
-
-//Задание 10 (2.6)
-const arrSum = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-
-for (let i = 0; i < arrSum.length; i++) {
-    console.log(arrSum[i + 1] + arrSum[i]);
+let reversArr = (arr) => {
+    return arr.reverse();
 }
 
-//Задание 11 (2.6)
-let arr11 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-let random = arr11[Math.floor(Math.random() * arr11.length)];
-console.log(random);
-const even = arr11.filter(el => el % 2 === 0);
-console.log(even);
+let toNumberArr = (arrTwo) => {
+    for (let i = 0; i < arrTwo.length; i++) {
+        arrTwo[i] *= 1;
+        if (isNaN(arrTwo[i])) arrTwo.splice(i, 1);
+    }
+    return arrTwo;
+}
 
-//Задание 12 (2.6)
-let arr12 = [1, 2, 3, 4, 5, 6];
-let random2 = arr12[Math.floor(Math.random() * arr12.length)];
-console.log(random2);
-const sum = arr12.reduce((a, b) => (a + b)) / arr12.length;
-console.log(sum);
+let each = (anyArray, func) => {
+    return func(anyArray);
+}
+
+console.log(each(arr, reversArr));
+console.log(each(arrTwo, toNumberArr));
+
+// Задание 4 (2.8)
+const timer = (myDate) => {
+    myDate = new Date();
+    console.log(myDate);
+    const idInterval = setInterval(() => {
+        myDate = new Date();
+        console.log(myDate);
+    }, 3000);
+    setTimeout(() => {
+        clearInterval(idInterval);
+        console.log('30 секунд прошло');
+    }, 30000);
+}
+timer();
+
+// Задание 5 (2.8)
+function calling() {
+    console.log('Звоню!')
+};
+
+function beeps(callback) {
+    setTimeout(() => {
+        console.log('Идут гудки...')
+        callback();
+    }, 1000);
+}
+
+function talk() {
+    console.log('Разговор')
+}
+
+calling();
+beeps(talk);
