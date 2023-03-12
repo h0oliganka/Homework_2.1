@@ -382,14 +382,16 @@
 // console.log(str.toUpperCase());
 
 // // Задание 2 (2.7)
-// const products = ['Кошка', 'Кит', 'Комар', 'Носорог'];
-// const search = 'Ко';
-
-// products.forEach((product) => {
-//     if (product.toLowerCase().includes(search.toLowerCase())) {
-//         console.log([product]);
-//     }
-// });
+// let resultArray = [];
+// function searchStart(arr, str) {
+//     arr.forEach(element => {
+//         if (element.toLowerCase().startsWith(str.toLowerCase())) {
+//             resultArray.push(element);
+//         }
+//     });
+//     console.log(resultArray);
+// }
+// searchStart(['Кошка', 'Кит', 'Комар', 'Носорог'], 'ко'); //['кошка', 'комар']
 
 // // Задание 3 (2.7)
 // console.log(Math.floor(32.58884)); // 32
@@ -434,35 +436,123 @@
 
 // console.log(theBigDay);
 
-// Задание 10 (2.7)
-// function showTime () {
-//     let days = ["воскресенье", "понедельник", "вторник", "среда", "четверг", "пятница", "суббота"];
-//     let months = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"];
-//     let myDates = new Date();
+// //Задание 10 (2.7)
+// let date = new Date();
 
-//     let out = "Дата: " + myDates.getDate() + " " + months[myDates.getMonth()] + " " + myDates.getFullYear() + " - это " + days[myDates.getDay()];
-//     let time = "Время: " + myDates.getHours() + ":" + myDates.getMinutes() + ":" + myDates.getSeconds();
-//     return out + " " + time;
+// function dataView(date) {
+//     const days = ["Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота"];
+//     const months = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"];
+//     let dates = date.getDate() + " " + months[date.getMonth()] + " " + date.getFullYear() + " - это " + days[date.getDay()] +" " + date.getHours() + " часов" + " " + date.getMinutes() + " минут" +" " + date.getSeconds()+ " секунд";
+//     console.log(dates);
+// }
+// dataView(date);
+
+
+// // Задание 11 (2.7)
+// const checkFruits = () => {
+
+//     let list =['Яблоко', 'Груша', 'Дыня', 'Виноград', 'Персик', 'Апельсин', 'Мандарин'];
+//     list = list.sort(() => Math.random() - 0.5);
+//     alert(`Запомните порядок элементов ${ list}`);
+
+//     let userAnswer =(prompt('Чему равнялся первый элемент массива?'));
+//     let userAnswerTwo = (prompt('Чему равнялся последний элемент массива?'));
+
+//     if (userAnswer.toLowerCase() == list[0].toLowerCase() && userAnswerTwo.toLowerCase() == list[6].toLowerCase()) {
+//         alert('Поздравляю, вы угадали оба элемента');
+//     } else if (userAnswer.toLowerCase() == list[0].toLowerCase() || userAnswerTwo.toLowerCase() == list[6].toLowerCase()) {
+//         alert('Вы были близки к победе!'); 
+//     } else {
+//     alert('Вы не угадали ни одного элемента');
+//     }
 // }
 
-// console.log(showTime());
+// Задание 1 (2.8)
+function getResult(callback) {
+    let arr = [3, 4, 1, 9];
+    callback();
+}
 
-// Задание 11 (2.7)
-const checkFruits = () => {
-  
-    let list =['Яблоко', 'Груша', 'Дыня', 'Виноград', 'Персик', 'Апельсин', 'Мандарин'];
-    list = list.sort(() => Math.random() - 0.5);
-    alert(`Запомните порядок элементов ${ list}`);
-    
-    let userAnswer =(prompt('Чему равнялся первый элемент массива?'));
-    let userAnswerTwo = (prompt('Чему равнялся последний элемент массива?'));
-    
-    if (userAnswer.toLowerCase() == list[0].toLowerCase() && userAnswerTwo.toLowerCase() == list[6].toLowerCase()) {
-        alert('Поздравляю, вы угадали оба элемента');
-    } else if (userAnswer.toLowerCase() == list[0].toLowerCase() || userAnswerTwo.toLowerCase() == list[6].toLowerCase()) {
-        alert('Вы были близки к победе!'); 
-    } else {
-    alert('Вы не угадали ни одного элемента');
-        
+function getResultSum() {
+    let arr = [3, 4, 1, 9];
+    console.log(arr.reduce((a, b) => a + b));
+}
+
+function getResultMult() {
+    let arr = [3, 4, 1, 9];
+    console.log(arr.reduce((a, b) => a * b));
+}
+
+getResult(getResultSum); // 17
+getResult(getResultMult); // 108
+
+// Задание 2 (2.8)
+function compareUser(a, b) {
+    return (a.age - b.age)
+}
+const listUsers = [
+    { name: 'Jon', age: 22 },
+    { name: 'Richard', age: 18 },
+    { name: 'Anton', age: 32 },
+    { name: 'Lida', age: 23 },
+    { name: 'Bob', age: 44 },
+];
+listUsers.sort(compareUser);
+console.log(listUsers);
+
+// Задание 3 (2.8)
+const arr = [1, '4', 9, 'two'];
+const arrTwo = [1, '4', false, 9, 'two'];
+
+let reversArr = (arr) => {
+    return arr.reverse();
+}
+
+let toNumberArr = (arrTwo) => {
+    for (let i = 0; i < arrTwo.length; i++) {
+        arrTwo[i] *= 1;
+        if (isNaN(arrTwo[i])) arrTwo.splice(i, 1);
     }
-     }
+    return arrTwo;
+}
+
+let each = (anyArray, func) => {
+    return func(anyArray);
+}
+
+console.log(each(arr, reversArr));
+console.log(each(arrTwo, toNumberArr));
+
+// Задание 4 (2.8)
+const timer = (myDate) => {
+    myDate = new Date();
+    console.log(myDate);
+    const idInterval = setInterval(() => {
+        myDate = new Date();
+        console.log(myDate);
+    }, 3000);
+    setTimeout(() => {
+        clearInterval(idInterval);
+        console.log('30 секунд прошло');
+    }, 30000);
+}
+timer();
+
+// Задание 5 (2.8)
+function calling() {
+    console.log('Звоню!')
+};
+
+function beeps(callback) {
+    setTimeout(() => {
+        console.log('Идут гудки...')
+        callback();
+    }, 1000);
+}
+
+function talk() {
+    console.log('Разговор')
+}
+
+calling();
+beeps(talk);
